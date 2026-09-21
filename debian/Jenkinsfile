@@ -3,7 +3,8 @@
 // Current version of this Pipeline https://github.com/VitexSoftware/BuildImages/blob/main/Test/Jenkinsfile
 
 String[] distributions = ['debian:trixie',
-            'debian:forky',]
+            // 'debian:forky', // Disabled: debian:forky excluded until deps are available
+            ]
 
 String vendor = 'vitexsoftware'
 //String distroFamily = ''
