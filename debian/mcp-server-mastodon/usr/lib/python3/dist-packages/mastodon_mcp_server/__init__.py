@@ -1,0 +1,1 @@
+"""Mastodon MCP Server package."""

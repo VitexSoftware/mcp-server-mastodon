@@ -1,0 +1,13 @@
+ad6a7c60c3fe0feeaa5b35e900a8ba55  usr/bin/mastodon-mcp
+c72246579c4437c07cebb86fbcbc6d90  usr/lib/python3/dist-packages/mastodon_mcp_server-1.0.5.dist-info/INSTALLER
+ba9761dfd6d520556fd434be01b41206  usr/lib/python3/dist-packages/mastodon_mcp_server-1.0.5.dist-info/METADATA
+ef2c8f2df39dac373c521c2b1220ef39  usr/lib/python3/dist-packages/mastodon_mcp_server-1.0.5.dist-info/WHEEL
+baf44da93163f7bd4b7ee95499d3c95f  usr/lib/python3/dist-packages/mastodon_mcp_server-1.0.5.dist-info/entry_points.txt
+e58880b1e8db0e49cd990f69907792f9  usr/lib/python3/dist-packages/mastodon_mcp_server-1.0.5.dist-info/top_level.txt
+73133c5cfa018502fa63f6fa0a60407d  usr/lib/python3/dist-packages/mastodon_mcp_server/__init__.py
+a97030acb14cf4caf8b67773dffa2ee4  usr/lib/python3/dist-packages/mastodon_mcp_server/server.py
+a204c200b2165104d7f732e092cd9dc8  usr/share/doc/mcp-server-mastodon/changelog.Debian.gz
+3cadcb8f1a4db4d6c08f07ee9e078084  usr/share/doc/mcp-server-mastodon/copyright
+0928ae2b18bca14501a071a63c8c6abc  usr/share/icons/hicolor/scalable/apps/mastodon-mcp-server.svg
+efcafaf2d1c29f514ede7d18c88867b6  usr/share/man/man1/mastodon-mcp.1.gz
+dc326ba9bf84bb61945819396ea7d8ca  usr/share/metainfo/mastodon-mcp-server.metainfo.xml

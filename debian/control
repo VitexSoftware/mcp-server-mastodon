@@ -1,4 +1,4 @@
-Source: mastodon-mcp-server
+Source: mcp-server-mastodon
 Section: python
 Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
@@ -10,12 +10,12 @@ Build-Depends:
  python3-setuptools,
  appstream,
 Standards-Version: 4.7.0
-Homepage: https://github.com/VitexSoftware/mastodon-mcp-server
+Homepage: https://github.com/VitexSoftware/mcp-server-mastodon
 Rules-Requires-Root: no
-Vcs-Git: https://github.com/VitexSoftware/mastodon-mcp-server.git
-Vcs-Browser: https://github.com/VitexSoftware/mastodon-mcp-server
+Vcs-Git: https://github.com/VitexSoftware/mcp-server-mastodon.git
+Vcs-Browser: https://github.com/VitexSoftware/mcp-server-mastodon
 
-Package: mastodon-mcp-server
+Package: mcp-server-mastodon
 Architecture: all
 Depends:
  ${misc:Depends},
@@ -24,6 +24,9 @@ Depends:
  python3-mastodon (>= 2.0.1),
  python3-dotenv (>= 1.0.1),
  python3-langdetect,
+Provides: mastodon-mcp-server
+Replaces: mastodon-mcp-server (<< 1.0.6~)
+Breaks: mastodon-mcp-server (<< 1.0.6~)
 Description: Model Context Protocol server for Mastodon integration
  A comprehensive MCP server providing access to Mastodon social network
  functionality through the Model Context Protocol, enabling AI assistants
@@ -47,8 +50,8 @@ Architecture: all
 Depends:
  ${misc:Depends},
  mcprack (>= 1.5.1),
- mastodon-mcp-server (= ${binary:Version}),
+ mcp-server-mastodon (= ${binary:Version}),
 Description: Registers Mastodon MCP server into mcprack catalog
- Companion package for mastodon-mcp-server. Installing it registers
+ Companion package for mcp-server-mastodon. Installing it registers
  the mastodon-mcp binary as an available MCP server in the local
  mcprack instance; removing it unregisters it again.

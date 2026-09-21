@@ -1,3 +1,11 @@
+mcp-server-mastodon (1.0.6-1) unstable; urgency=medium
+
+  * Rename package mastodon-mcp-server → mcp-server-mastodon
+    (Provides/Replaces/Breaks for clean apt upgrade).
+  * Update companion Depends and Vcs URLs for the GitHub rename.
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 21 Sep 2026 15:40:00 +0200
+
 mastodon-mcp-server (1.0.5-1) unstable; urgency=medium
 
   * Fix: replace the hand-rolled minimal MCP JSON-RPC implementation

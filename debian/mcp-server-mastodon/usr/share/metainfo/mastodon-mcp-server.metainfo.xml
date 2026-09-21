@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="console-application">
+  <id>cz.vitexsoftware.mastodon-mcp-server</id>
+  <icon type="stock">mastodon-mcp-server</icon>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Mastodon MCP Server</name>
+  <summary>Model Context Protocol server for Mastodon integration</summary>
+  <description>
+    <p>
+      A comprehensive MCP server providing access to Mastodon social network
+      functionality through the Model Context Protocol, enabling AI assistants
+      and other MCP-compatible tools to interact with Mastodon instances.
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Timeline reading (home, local, public, hashtag)</li>
+      <li>Status posting, deleting, favouriting, and reblogging</li>
+      <li>Account management and social graph operations (follow, block, mute)</li>
+      <li>Notifications management</li>
+      <li>Full-text search for accounts, statuses, and hashtags</li>
+      <li>Trending tags, statuses, and links</li>
+      <li>List management</li>
+      <li>Media upload</li>
+      <li>Poll voting</li>
+      <li>Read-only mode for safe browsing</li>
+      <li>Support for both STDIO and HTTP transports</li>
+    </ul>
+  </description>
+  <url type="homepage">https://github.com/VitexSoftware/mastodon-mcp-server</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/mastodon-mcp-server/issues</url>
+  <url type="vcs-browser">https://github.com/VitexSoftware/mastodon-mcp-server</url>
+  <developer id="cz.vitexsoftware">
+    <name>Vítězslav Dvořák</name>
+  </developer>
+  <provides>
+    <binary>mastodon-mcp</binary>
+  </provides>
+  <releases>
+    <release version="1.0.5" date="2026-09-10">
+      <description>
+        <p>Switch back to the fastmcp SDK (matching every other VitexSoftware MCP server), fixing tools/list responses being rejected by fastmcp-based aggregators such as mcprack.</p>
+      </description>
+    </release>
+    <release version="1.0.1" date="2026-04-30">
+      <description>
+        <p>Replace fastmcp dependency with bundled stdlib-only MCP implementation.</p>
+      </description>
+    </release>
+    <release version="1.0.0" date="2026-04-28">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1"/>
+</component>
