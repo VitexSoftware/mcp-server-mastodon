@@ -10,9 +10,11 @@ uv.lock
 .pybuild/
 .claude/
 debian/debhelper-build-stamp
-debian/mastodon-mcp-server.postinst.debhelper
-debian/mastodon-mcp-server.prerm.debhelper
-debian/mastodon-mcp-server.substvars
+debian/*.postinst.debhelper
+debian/*.prerm.debhelper
+debian/*.substvars
+debian/*.debhelper.log
 debian/.debhelper/
-debian/mastodon-mcp-server/
+debian/mcp-server-*/
+debian/mcprack-mcp-server-*/
 debian/files
