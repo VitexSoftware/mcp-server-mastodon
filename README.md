@@ -288,15 +288,42 @@ The following tools are implemented but commented out in `server.py`. Uncomment 
 # Offline (tool registration + helper functions + version check)
 python3 scripts/test_server.py
 
-# With live instance
-MASTODON_INSTANCE=mastodon.social \
+# With live instance (basic connectivity)
+MASTODON_INSTANCE=https://mastodon.social \
 MASTODON_ACCESS_TOKEN=your-token \
 python3 scripts/test_server.py
 ```
 
+### Live capability scenario
+
+`tests/live_capability_scenario.py` exercises every registered read-only tool against a real Mastodon instance and verifies that write tools refuse with a clear error when `READ_ONLY=true` (the default).
+
+```bash
+# Env-based (recommended)
+MASTODON_INSTANCE=https://f.cz \
+MASTODON_ACCESS_TOKEN=your-token \
+READ_ONLY=true \
+  python3 tests/live_capability_scenario.py --json-out /tmp/mastodon-live.json
+
+# Or pass credentials as flags
+python3 tests/live_capability_scenario.py \
+  --instance https://f.cz \
+  --access-token "$MASTODON_ACCESS_TOKEN" \
+  --json-out /tmp/mastodon-live.json
+```
+
+What it checks:
+
+- MCP tool catalog registration (callable present for every tool)
+- Annotation vs `validate_write()` consistency (`readOnlyHint=False` tools must guard writes)
+- Every read-only tool against the live API (instance, account, timelines, statuses, search, trending, lists, mutes/blocks, directory, …)
+- Every write tool under `READ_ONLY=true` (must raise / refuse; never mutate)
+
+Exit code is `0` only when every non-skipped check passes. Use `--json-out` for a machine-readable report. `--allow-writes` skips the write guards (does not exercise mutating calls).
+
 ## Architecture
 
-The server uses a bundled stdlib-only MCP implementation (`mastodon_mcp_server/_mcp.py`) so it has **no dependency on `python3-fastmcp`** or its deep dependency chain. This makes packaging for Debian/Ubuntu straightforward. The implementation is compatible with the FastMCP decorator API (`@mcp.tool()`).
+The server is built on [FastMCP](https://gofastmcp.com/) (`python3-fastmcp`) and [Mastodon.py](https://github.com/halcy/Mastodon.py). Tools are registered with MCP annotations (`readOnlyHint`, `destructiveHint`, `idempotentHint`, `openWorldHint`). Write tools call `validate_write()`, which refuses when `READ_ONLY` is enabled (default: `true`).
 
 ## Citation
 
