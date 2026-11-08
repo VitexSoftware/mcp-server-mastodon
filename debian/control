@@ -49,7 +49,7 @@ Package: mcprack-mcp-server-mastodon
 Architecture: all
 Depends:
  ${misc:Depends},
- mcprack (>= 1.5.1),
+ mcprack (>= 1.6.0),
  mcp-server-mastodon (= ${binary:Version}),
 Description: Registers Mastodon MCP server into mcprack catalog
  Companion package for mcp-server-mastodon. Installing it registers

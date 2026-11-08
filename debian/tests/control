@@ -11,3 +11,7 @@ Restrictions: allow-stderr
 Tests: test-version
 Depends: mastodon-mcp-server
 Restrictions: allow-stderr
+
+Tests: smoke
+Depends: @, mcprack (>= 1.6.0)
+Restrictions: allow-stderr
